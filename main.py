@@ -26,5 +26,14 @@ if __name__ == "__main__":
     # Install dependencies
     # install_packages()
 
+    # Define a default port and check for a command-line argument
+    port_number = 8501
+    if len(sys.argv) > 1:
+        try:
+            port_number = int(sys.argv[1])
+        except ValueError:
+            print(f"Invalid port number '{sys.argv[1]}'. Using default port {port_number}.")
+
     # Run the Streamlit app
-    run_app()
+    run_app(port=port_number)
+    
