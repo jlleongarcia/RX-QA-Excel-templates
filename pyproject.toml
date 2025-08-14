@@ -1,0 +1,9 @@
+[project]
+name = "rx-qa-excel-templates"
+version = "0.1.0"
+description = "WebApp to download Excel templates for Quality Assurance"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "streamlit==1.35.0",
+]
