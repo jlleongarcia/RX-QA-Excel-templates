@@ -1,17 +1,8 @@
 import subprocess
 import sys
 
-# def install_packages():
-#     """Install packages from requirements.txt."""
-#     print("Checking and installing required packages...")
-#     try:
-#         subprocess.check_call([sys.executable, "-m", "uv", "sync", "--all-groups"])
-#         print("Packages installed successfully.")
-#     except subprocess.CalledProcessError as e:
-#         print(f"Error installing packages: {e}")
-#         sys.exit(1)
 
-def run_app():
+def run_app(port=8501):
     """Run the Streamlit app."""
     print("Starting the Streamlit app...")
     try:
@@ -22,9 +13,6 @@ def run_app():
 
 if __name__ == "__main__":
     print("Starting setup script...")
-    
-    # Install dependencies
-    # install_packages()
 
     # Define a default port and check for a command-line argument
     port_number = 8501
