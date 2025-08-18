@@ -84,9 +84,9 @@ for category in sorted_categories:
 
     # Determine the label for the expander
     if category == "Root":
-        expander_label = f"**Files in Root Directory** ({len(files_in_category)} file(s))"
+        expander_label = f"**Files in Root Directory**"
     else:
-        expander_label = f"**{category}** ({len(files_in_category)} file(s))"
+        expander_label = f"**{category}**"
 
     with st.expander(expander_label, expanded=False): # Set expanded=True if you want them open by default
         if not files_in_category:
