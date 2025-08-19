@@ -2,11 +2,16 @@ import subprocess
 import sys
 
 
-def run_app(port=8501):
+def run_app(port):
     """Run the Streamlit app."""
     print("Starting the Streamlit app...")
     try:
-        subprocess.check_call([sys.executable, "-m", "streamlit", "run", "templates_download.py"])
+        subprocess.check_call([
+            sys.executable, "-m", "streamlit", "run", "templates_download.py",
+            "--server.address=0.0.0.0", # Make Streamlit accessible to all interfaces
+            f"--server.port={port}",
+            "--server.headless", "true" # Avoid asking for email 
+        ])
     except subprocess.CalledProcessError as e:
         print(f"Error running Streamlit app: {e}")
         sys.exit(1)
