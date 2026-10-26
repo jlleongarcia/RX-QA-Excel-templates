@@ -124,6 +124,7 @@ for category in sorted_categories:
                             data=fp,
                             file_name=file_name, # The downloaded file name will just be the filename, not the full path
                             mime=mime_type,
+                            on_click="ignore", # Download without rerunning the whole app
                             key=f"download_{category}_{file_name}" # Unique key for each button
                         )
 

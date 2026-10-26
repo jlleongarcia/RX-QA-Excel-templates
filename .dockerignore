@@ -1,0 +1,13 @@
+.venv
+.git
+__pycache__/
+*.py[oc]
+build/
+dist/
+*.egg-info
+Dockerfile
+docker-compose.yml
+.dockerignore
+.github
+Excel_templates
+*.bat

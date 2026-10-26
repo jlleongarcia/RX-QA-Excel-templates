@@ -1,0 +1,10 @@
+services:
+  rx-qa-excel-templates:
+    image: ghcr.io/jlleongarcia/rx-qa-excel-templates:latest
+    build: .
+    container_name: rx-qa-excel-templates
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./Excel_templates:/app/Excel_templates:ro
+    restart: always
